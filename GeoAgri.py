@@ -7,8 +7,12 @@ import rasterio
 from rasterio.io import MemoryFile
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 from sklearn.cluster import KMeans
 from PIL import Image
+
+# Criar pasta 'resultados' caso não exista
+os.makedirs("resultados", exist_ok=True)
 
 def carregar_imagem(caminho):
     if caminho.startswith("http"):
